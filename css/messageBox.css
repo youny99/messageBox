@@ -1,0 +1,122 @@
+/**
+ * alertBox.js
+ * 原生javascript弹框插件
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.postbird-box-container {
+    font-family: "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.postbird-box-container.active {
+    display: block;
+}
+
+.postbird-box-content {
+    width: 400px;
+    max-width: 90%;
+    min-height: 150px;
+    background-color: #fff;
+    border: solid 1px #dfdfdf;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: -100px; */
+}
+
+.postbird-box-header {
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1em;
+    letter-spacing: 2px;
+    border-bottom:1px solid #eee;
+}
+
+.postbird-box-close-btn {
+    cursor: pointer;
+    font-weight: 700;
+    color: #000;
+    float: right;
+    opacity: 0.5;
+    font-size: 1.3em;
+    margin-top: -3px;
+    /*display: none;*/
+}
+
+.postbird-box-close-btn:hover {
+    opacity: 1;
+}
+
+.postbird-box-text {
+    width: 100%;
+    padding: 10px 10% 50px 10%;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 1px;
+    max-height:400px;
+    overflow-y: auto;
+}
+
+.postbird-box-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px;
+    margin: 0;
+    border-top: solid 1px #eee;
+    text-align: center;
+    display: block;
+    background-color: #fff;
+}
+.postbird-box-footer .btn-footer{
+    font-family: "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;
+    display: inline-block;
+    padding:3px 10px;
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    font-size: 1em;
+    letter-spacing: 2px;
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    border:1px solid #ddd;
+    outline: 0;
+
+}
+.postbird-box-footer .btn-footer:hover {
+    background-color: #e5e5e5;
+}
+.postbird-box-footer .btn-footer-ok:hover{
+    background-color: #d70051;
+    opacity: 0.7;
+}
+.postbird-box-footer .btn-footer-ok {
+    color: #fff;
+    background-color: #d70051;
+}
+.postbird-box-footer .btn-footer-cancel{
+    margin-right:10px;
+}
